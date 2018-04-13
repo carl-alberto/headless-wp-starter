@@ -27,12 +27,12 @@ class RoboFile extends \Robo\Tasks {
 			return;
 		}
 
-		$dbpass = $this->ask("DB root password [root]: ");
+		$dbpass = $this->ask("Database root password (press Enter for default value [root]): ");
 		if ( !$dbpass || strlen( $dbpass ) == 0 ) {
 			$dbpass = "root";
 		}
 
-		$dbip = $this->ask("DB IP [0.0.0.0]: ");
+		$dbip = $this->ask("Database IP address (press Enter for default value [0.0.0.0]): ");
 		if ( !$dbip || strlen( $dbip ) == 0 ) {
 			$dbip = "0.0.0.0";
 		}
